@@ -13,3 +13,6 @@ class Odczyt(models.Model):
     odczyt = models.DecimalField
     termometr = models.ForeignKey(Termometr)
     data = models.DateTimeField
+
+    def __str__(self):
+        return self.odczyt
