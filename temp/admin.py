@@ -1,5 +1,9 @@
 from django.contrib import admin
-from temp.models import Termometr, Odczyt
+from .models import Termometr, Odczyt
 
-admin.site.register(Termometr)
+class TermometrAdmin(admin.ModelAdmin):
+    search_fields = ['nazwa']
+    list_display = ['nazwa', 'datadodania', 'dodanyprzez']
+
+admin.site.register(Termometr, TermometrAdmin)
 admin.site.register(Odczyt)
