@@ -5,4 +5,4 @@ from .models import Termometr
 class TermometrListView(ListView):
     model = Termometr
 
-#robie test3
+#robie test4
