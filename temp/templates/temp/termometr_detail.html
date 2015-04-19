@@ -2,6 +2,7 @@
 
 {% block 'content' %}
 
+    <div><a href="{% url 'termometr-list' %}">Powrót do listy autorów</a></div>
     {{object.nazwa}} dodany przez {{object.dodanyprzez}} w dniu {{ object.datadodania }}
 
 {% endblock %}

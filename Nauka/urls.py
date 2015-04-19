@@ -9,7 +9,6 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^termometr/', TermometrListView.as_view(), name='termometr-list'),
-    url(r'^odczyt/', OdczytListView.as_view(), name='odczyt-list'),
-    url(r'^termometr/(?P<pk>\d+)/$', TermometrDetailView.as_view(), name='termometr-detail')
+    url(r'^termometr/', include('Nauka.urls_termometr')),
+    url(r'^odczyt/', include('Nauka.urls_odczyt'))
 ]
