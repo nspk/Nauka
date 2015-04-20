@@ -1,7 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-
-from temp.views import TermometrListView, OdczytListView, TermometrDetailView
+from contact.views import MessageAddView
 
 urlpatterns = [
     # Examples:
@@ -10,5 +9,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^termometr/', include('Nauka.urls_termometr')),
-    url(r'^odczyt/', include('Nauka.urls_odczyt'))
+    url(r'^odczyt/', include('Nauka.urls_odczyt')),
+    url(r'^contact/$', MessageAddView.as_view())
 ]
